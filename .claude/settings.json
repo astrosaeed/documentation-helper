@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where python *)",
+      "Bash(pip show *)",
+      "Bash(\"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\\\\Scripts\\\\python.exe\" -m pip list)",
+      "Bash(\"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\\\\Scripts\\\\python.exe\" -m pip install -r \"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\requirements.txt\")",
+      "Bash(py -0p)",
+      "Bash(py -3.11 -m venv \"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\")",
+      "Bash(\"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\\\\Scripts\\\\python.exe\" --version)",
+      "Bash(\"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\\\\Scripts\\\\python.exe\" -m pip install --upgrade pip -q)",
+      "Bash(git -C \"c:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\" log --oneline -- requirements.txt)",
+      "Bash(git -C \"c:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\" show HEAD:requirements.txt)",
+      "Bash(\"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\\\\Scripts\\\\python.exe\" -m pip install certifi python-dotenv langchain-chroma langchain-classic langchain-core langchain-openai langchain-pinecone langchain-tavily)",
+      "Bash(\"C:\\\\Users\\\\saeed\\\\codes\\\\documentation-helper\\\\.venv\\\\Scripts\\\\python.exe\" ingestion_start.py)",
+      "Bash(python -c \"import langchain_google_genai\")",
+      "Bash(pip index *)",
+      "Bash(pip install *)",
+      "Bash(pip freeze *)",
+      "Bash(wc -l /tmp_req_new.txt)",
+      "Bash(python -c ' *)",
+      "Bash(GOOGLE_API_KEY=dummy python -c ' *)"
+    ]
+  }
+}
