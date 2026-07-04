@@ -58,7 +58,7 @@ The **LangChain Documentation Helper** is a sophisticated AI-powered web applica
 | 🔍 **Vector Database** | Pinecone 🌲 | Stores and retrieves document embeddings |
 | 🌐 **Web Crawling** | Tavily | Intelligent web scraping and content extraction |
 | 🧩 **Memory** | Conversational Memory | Coreference resolution and context continuity |
-| 🤖 **LLM** | OpenAI GPT | Powers the conversational AI |
+| 🤖 **LLM** | Google Gemini | Powers the conversational AI |
 | 🐍 **Backend** | Python | Core application logic |
 
 </div>
@@ -68,7 +68,7 @@ The **LangChain Documentation Helper** is a sophisticated AI-powered web applica
 ### Prerequisites
 
 - Python 3.8 or higher
-- OpenAI API key
+- Google API key (Gemini)
 - Pinecone API key
 - [Tavily API key](https://app.tavily.com/home?utm_campaign=eden_marco&utm_medium=socials&utm_source=linkedin) (required - for documentation crawling and web search)
 
@@ -85,7 +85,7 @@ The **LangChain Documentation Helper** is a sophisticated AI-powered web applica
    Create a `.env` file in the root directory:
    ```env
    PINECONE_API_KEY=your_pinecone_api_key_here
-   OPENAI_API_KEY=your_openai_api_key_here
+   GOOGLE_API_KEY=your_google_api_key_here
    TAVILY_API_KEY=your_tavily_api_key_here  # Required - for documentation crawling
    ```
 
@@ -153,7 +153,7 @@ These tutorials provide step-by-step guidance on integrating Tavily's powerful w
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `PINECONE_API_KEY` | Your Pinecone API key for vector storage | ✅ |
-| `OPENAI_API_KEY` | Your OpenAI API key for LLM access | ✅ |
+| `GOOGLE_API_KEY` | Your Google API key for Gemini LLM access | ✅ |
 | `TAVILY_API_KEY` | Your Tavily API key for documentation crawling and web search | ✅ |
 
 ## 🤝 Contributing

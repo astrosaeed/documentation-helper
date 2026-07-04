@@ -19,7 +19,8 @@
       "Bash(pip freeze *)",
       "Bash(wc -l /tmp_req_new.txt)",
       "Bash(python -c ' *)",
-      "Bash(GOOGLE_API_KEY=dummy python -c ' *)"
+      "Bash(GOOGLE_API_KEY=dummy python -c ' *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
