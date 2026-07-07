@@ -7,19 +7,19 @@ from langchain.chat_models import init_chat_model
 from langchain.messages import ToolMessage
 from langchain.tools import tool
 from langchain_pinecone import PineconeVectorStore
-from langchain_openai import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 load_dotenv()
 
 # Initialize embeddings (same as ingestion.py)
-embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 #Initialize vector store
 vectorstore = PineconeVectorStore(
     index_name="langchain-docs-2026", embedding=embeddings
 )
 # Initialize chat model
-model = init_chat_model("gpt-5.2", model_provider="openai")
+model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 
 
 @tool(response_format="content_and_artifact")
