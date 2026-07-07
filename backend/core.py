@@ -9,16 +9,16 @@ from langchain import hub
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.history_aware_retriever import create_history_aware_retriever
 from langchain.chains.retrieval import create_retrieval_chain
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 
 from consts import INDEX_NAME
 
 
 def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
     docsearch = PineconeVectorStore(index_name=INDEX_NAME, embedding=embeddings)
-    chat = ChatOpenAI(verbose=True, temperature=0)
+    chat = ChatGoogleGenerativeAI(model="gemini-2.5-flash", verbose=True, temperature=0)
 
     rephrase_prompt = hub.pull("langchain-ai/chat-langchain-rephrase")
 

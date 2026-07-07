@@ -1,7 +1,7 @@
 import os
 from langchain.document_loaders import ReadTheDocsLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.vectorstores import Pinecone
 import pinecone
 
@@ -29,7 +29,7 @@ def ingest_docs() -> None:
         doc.metadata.update({"source": new_url})
 
     print(f"Going to insert {len(documents)} to Pinecone")
-    embeddings = OpenAIEmbeddings()
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
     Pinecone.from_documents(documents, embeddings, index_name=INDEX_NAME)
     print("****** Added to Pinecone vectorstore vectors")
 
